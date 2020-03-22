@@ -9,7 +9,7 @@ class Users extends Component {
         const { match } = this.props
 
         return (
-            <div className="row justify-content-md-center" style={{ marginTop: '40px' }}>
+            <div className="row justify-content-md-center">
                 <div className="col-xl-7 col-lg-8 col-md-9 col-sm-12 col-xs-12">
                     <table className="table table-striped table-sm">
                         <thead>

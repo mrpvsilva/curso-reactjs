@@ -9,15 +9,20 @@ class User extends Component {
 
 
         return (
-            <div>
-                <label>user:</label>{user.nome}
-                <ul>
-                    {
-                        user.cursos.map(c => (
-                            <li key={c}>{c}</li>
-                        ))
-                    }
-                </ul>
+            <div style={{ marginTop: '20px' }}>
+                <h3>{user.nome}</h3>
+                <div className="card">
+                    <div className="card-header">
+                        Cursos
+                    </div>
+                    <ul className="list-group list-group-flush">
+                        {
+                            user.cursos.map(c => (
+                                <li className="list-group-item" key={c}>{c}</li>
+                            ))
+                        }
+                    </ul>
+                </div>
             </div>
         );
     }

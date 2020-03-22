@@ -21,9 +21,10 @@ class Timer extends Component {
     }
     render() {
         return (
-            <div>
-                <h1>Timer</h1>
-                <h3>{this.state.timer}</h3>
+            <div className="row justify-content-md-center">
+                <div className="col-xl-7 col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                    <h3>Timer: {this.state.timer}</h3>
+                </div>
             </div>
         );
     }

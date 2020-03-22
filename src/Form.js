@@ -1,30 +1,35 @@
 import React, { Component } from 'react';
 
 class Form extends Component {
+
     constructor(props) {
         super(props)
 
         this.state = {
             email: '',
             password: '',
-            remember: false
+            remember: false,
+            json: ''
         }
 
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
-    }   
+    }
 
     onChange(state) {
         this.setState(state);
     }
 
     onSubmit() {
-        console.log(this.state);
+        let state = this.state;
+        const { email, password, remember } = state;
+        state.json = JSON.stringify({ email, password, remember });
+        this.setState(this.state);
     }
 
     render() {
         return (
-            <div className="row justify-content-md-center" style={{ marginTop: '40px' }}>
+            <div className="row justify-content-md-center">
                 <div className="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-xs-12">
                     <div className="form-group">
                         <label htmlFor="email">Email address:</label>
@@ -51,8 +56,10 @@ class Form extends Component {
                             </label>
                     </div>
                     <button className="btn btn-primary" onClick={() => this.onSubmit()}>Submit</button>
+                    <h5 style={{ marginTop: '20px' }}>{this.state.json}</h5>
                 </div>
             </div>
+
         );
     }
 }

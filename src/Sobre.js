@@ -2,8 +2,10 @@ import React from 'react';
 
 function Sobre() {
     return (
-        <div>
-            <h1>Sobre</h1>
+        <div className="row">
+            <div className="col">
+                <h1>Sobre</h1>
+            </div>
         </div>
     );
 }
