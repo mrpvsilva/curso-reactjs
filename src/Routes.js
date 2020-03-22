@@ -4,6 +4,7 @@ import Contador from './Contador';
 import Timer from './Timer';
 import Form from './Form';
 import Users from './Users';
+import Http from './Http';
 
 const routes = [
     { description: 'Home', path: '/', component: App, exact: true },
@@ -11,6 +12,7 @@ const routes = [
     { description: 'Timer', path: '/Timer', component: Timer },
     { description: 'Form', path: '/Form', component: Form },
     { description: 'Users', path: '/Users', component: Users },
+    { description: 'Http', path: '/Http', component: Http },
     { description: 'Sobre', path: '/Sobre', component: Sobre }
 ]
 
