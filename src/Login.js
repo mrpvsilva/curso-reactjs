@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
-class Form extends Component {
+import Auth from './Auth';
+
+class Login extends Component {
 
     constructor(props) {
         super(props)
@@ -8,8 +10,7 @@ class Form extends Component {
         this.state = {
             email: '',
             password: '',
-            remember: false,
-            json: ''
+            remember: false
         }
 
         this.onChange = this.onChange.bind(this);
@@ -21,10 +22,8 @@ class Form extends Component {
     }
 
     onSubmit() {
-        let state = this.state;
-        const { email, password, remember } = state;
-        state.json = JSON.stringify({ email, password, remember });
-        this.setState(this.state);
+        Auth.sigin(JSON.stringify(this.state));
+        this.props.history.push("/");
     }
 
     render() {
@@ -56,7 +55,6 @@ class Form extends Component {
                             </label>
                     </div>
                     <button className="btn btn-primary" onClick={() => this.onSubmit()}>Submit</button>
-                    <h5 style={{ marginTop: '20px' }}>{this.state.json}</h5>
                 </div>
             </div>
 
@@ -64,4 +62,4 @@ class Form extends Component {
     }
 }
 
-export default Form;
+export default Login;

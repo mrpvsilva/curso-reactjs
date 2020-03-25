@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import UserList from './UserList';
-import { Route, Link } from 'react-router-dom';
+import { Route, Link, Switch } from 'react-router-dom';
 import User from './User';
 
 
 class Users extends Component {
+
     render() {
         const { match } = this.props
 
@@ -35,7 +36,9 @@ class Users extends Component {
                     </table>
                 </div>
                 <div className="col-xl-7 col-lg-8 col-md-9 col-sm-12 col-xs-12">
-                    <Route path={`${match.path}/:id`} component={User} />
+                    <Switch>
+                        <Route path={`${match.path}/:id`} component={User} />
+                    </Switch>
                 </div>
 
             </div>
