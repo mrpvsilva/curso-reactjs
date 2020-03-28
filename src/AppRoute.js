@@ -1,18 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import DefaultLayout from './Layouts/DefaultLayout';
+import Login from './Pages/Login';
+import PageNotFound from './Pages/PageNotFound';
 
-import DefaultLayout from './DefaultLayout';
-import Login from './Login';
-import NotFound from './NotFound';
-
-const AppRoute = ({ history }) => {
+const AppRoute = ({ match }) => {
     return (
         <Router>
             <Switch>
-                <Route exact path="/" component={DefaultLayout} />
-                <Route path="/login" component={Login} />
-                <Route path="*" component={NotFound} />
+                <Route exact path="/login" component={Login} />
+                <Route path="/" component={DefaultLayout} /> 
             </Switch>
         </Router>
     );

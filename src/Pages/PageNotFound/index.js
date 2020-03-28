@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NotFound = () => {
+const PageNotFound = () => {
     return (
         <div>
             <img src="/assets/images/PageNotFound.jpg" style={{ width: 400, height: 400, display: 'block', margin: 'auto', position: 'relative' }} alt="page not found" />
@@ -9,5 +9,4 @@ const NotFound = () => {
         </div>
     );
 }
-
-export default NotFound;
+export default PageNotFound;

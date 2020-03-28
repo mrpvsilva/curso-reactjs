@@ -1,16 +1,16 @@
-import Contador from './Contador';
-import Timer from './Timer';
-import Users from './Users';
-import Http from './Http';
-import Filmes from './Filmes';
-import Sobre from './Sobre';
+import Contador from './Pages/Contador';
+import Timer from './Pages/Timer';
+import Http from './Pages/Http';
+import Filmes from './Pages/Filmes';
+import Sobre from './Pages/Sobre';
+import Home from './Pages/Home';
 
-export const Nav = [
-    { description: 'Contador', path: '/Contador', component: Contador },
-    { description: 'Timer', path: '/Timer', component: Timer },
-    { description: 'Users', path: '/Users', component: Users },
-    { description: 'Http', path: '/Http', component: Http },
-    { description: 'Filmes', path: '/Filmes', component: Filmes },
-    { description: 'Sobre', path: '/Sobre', component: Sobre }
+export default  [
+    { description: 'Home', path: '/home', component: Home },
+    { description: 'Contador', path: '/contador', component: Contador },
+    { description: 'Timer', path: '/timer', component: Timer },
+    { description: 'Http', path: '/http', component: Http },
+    { description: 'Filmes', path: '/filmes', component: Filmes },
+    { description: 'Sobre', path: '/sobre', component: Sobre }
 ]
 

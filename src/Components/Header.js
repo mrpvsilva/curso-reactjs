@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { Nav } from './Nav';
-import Auth from './Auth';
-
+import Nav from '../Nav';
+import Auth from '../Auth';
 
 class Header extends Component {
 
@@ -28,6 +27,7 @@ class Header extends Component {
         const collapsed = this.state.collapsed;
         const classOne = collapsed ? 'collapse navbar-collapse' : 'collapse navbar-collapse show';
         const classTwo = collapsed ? 'navbar-toggler navbar-toggler-right collapsed' : 'navbar-toggler navbar-toggler-right';
+       
         return (
             <header>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light" >
@@ -40,7 +40,7 @@ class Header extends Component {
                             {
                                 Nav.map(r => (
                                     <li className="nav-item" key={r.path}>
-                                        <NavLink className="nav-link" to={r.path}>{r.description}</NavLink >
+                                        <NavLink className="nav-link" to={`${r.path}`}>{r.description}</NavLink >
                                     </li>
                                 ))
                             }
