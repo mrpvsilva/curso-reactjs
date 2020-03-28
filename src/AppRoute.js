@@ -3,14 +3,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import DefaultLayout from './Layouts/DefaultLayout';
 import Login from './Pages/Login';
-import PageNotFound from './Pages/PageNotFound';
 
-const AppRoute = ({ match }) => {
+const AppRoute = () => {
     return (
-        <Router>
+        <Router basename="curso-reactjs">
             <Switch>
                 <Route exact path="/login" component={Login} />
-                <Route path="/" component={DefaultLayout} /> 
+                <Route path="/" component={DefaultLayout} />
             </Switch>
         </Router>
     );

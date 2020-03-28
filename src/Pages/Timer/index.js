@@ -21,8 +21,8 @@ class Timer extends Component {
     }
     render() {
         return (
-            <div className="row justify-content-md-center">
-                <div className="col-xl-7 col-lg-8 col-md-9 col-sm-12 col-xs-12">
+            <div className="row">
+                <div className="col">
                     <h3>Timer: {this.state.timer}</h3>
                 </div>
             </div>

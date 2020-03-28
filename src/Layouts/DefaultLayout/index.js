@@ -9,12 +9,14 @@ function DefaultLayout({ ...rest }) {
     return (
         <div>
             <Header {...rest} />
-            <Switch>
-                {
-                    Nav.map(n => <Route path={n.path} component={n.component} key={n.description} />)
-                }
-                <Redirect from="*" to="/home" />
-            </Switch>
+            <div className="container">
+                <Switch>
+                    {
+                        Nav.map(n => <Route path={n.path} component={n.component} key={n.description} />)
+                    }
+                    <Redirect from="*" to="/home" />
+                </Switch>
+            </div>
             <Footer />
         </div>
     );
