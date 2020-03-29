@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import http from '../../HttpClient';
 
 import './filmes.css'
 
@@ -14,8 +14,12 @@ export default class Filmes extends Component {
 
 
     componentDidMount() {
-        axios.get('https://sujeitoprogramador.com/r-api/?api=filmes')
+        http.get('https://sujeitoprogramador.com/r-api/?api=filmes')
             .then(({ data: filmes }) => this.setState({ filmes }))
+    }
+
+    componentWillUnmount() {
+        http.cancel('Operation canceled by the user.');
     }
 
     render() {

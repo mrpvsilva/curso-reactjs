@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Pessoa from './pessoa';
 
 export default class Excercicio extends Component {
+
     pessoas = ["Maria", "joão", "Lucas", "Pedro"];
 
     render() {

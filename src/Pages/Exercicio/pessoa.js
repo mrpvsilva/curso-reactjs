@@ -10,8 +10,6 @@ export default class Pessoa extends Component {
         }
     }
 
-
-
     handleClick = () => {
         const min = 0;
         const max = this.props.pessoas.length-1;
@@ -21,6 +19,7 @@ export default class Pessoa extends Component {
 
         this.setState({ pessoa: this.props.pessoas[idx] });
     }
+    
     render() {
         return (
             <div className="row" style={{ marginBottom: "10px" }}>

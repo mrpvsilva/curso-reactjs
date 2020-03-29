@@ -7,6 +7,9 @@ class Login extends Component {
     constructor(props) {
         super(props)
 
+        if (Auth.isAuthenticated())
+            this.props.history.push('/');
+
         this.state = {
             email: '',
             password: '',

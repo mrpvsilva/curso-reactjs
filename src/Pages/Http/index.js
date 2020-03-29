@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import http from '../../HttpClient';
 
 class Http extends Component {
 
@@ -11,13 +11,16 @@ class Http extends Component {
         }
     }
 
-
-
     componentDidMount() {
-        axios
+        http
             .get('https://jsonplaceholder.typicode.com/users')
-            .then(({ data: persons }) => this.setState({ persons }))
+            .then(({ data: persons }) => this.setState({ persons }));
     }
+
+    componentWillUnmount() {
+        http.cancel('Operation canceled by the user.');
+    }
+
     render() {
         return (
             <div className="row">
