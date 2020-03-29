@@ -11,7 +11,7 @@ class Http extends Component {
         }
     }
 
-    
+
 
     componentDidMount() {
         axios
@@ -24,11 +24,11 @@ class Http extends Component {
                 <div className="col">
                     <div className="card">
                         <ul className="list-group list-group-flush">
-                            {this.state.persons.map(({ id, name }) => <li className="list-group-item" key={id}>{name}</li>)}
+                            {this.state.persons.map(({ id, name }, i) => <li className={`list-group-item ${i % 2 === 0 ? 'list-group-item-secondary' : ''}`} key={id}>{name}</li>)}
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div >
         );
     }
 }
