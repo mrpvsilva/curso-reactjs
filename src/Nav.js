@@ -5,14 +5,16 @@ import Filmes from './Pages/Filmes';
 import Sobre from './Pages/Sobre';
 import Home from './Pages/Home';
 import Exercicio from './Pages/Exercicio';
+import Hooks from './Pages/Hooks';
 
-export default  [
+export default [
     { description: 'Home', path: '/home', component: Home },
     { description: 'Contador', path: '/contador', component: Contador },
     { description: 'Timer', path: '/timer', component: Timer },
     { description: 'Http', path: '/http', component: Http },
     { description: 'Filmes', path: '/filmes', component: Filmes },
     { description: 'Exercício', path: '/exercicio', component: Exercicio },
+    { description: 'Hooks', path: '/hooks', component: Hooks },
     { description: 'Sobre', path: '/sobre', component: Sobre }
 ]
 

@@ -35,3 +35,7 @@ footer p {
 div .container {
   margin-top: 30px;
 }
+
+div .container.login {
+  margin-top: 7%;
+}

@@ -8,7 +8,7 @@ export default class Excercicio extends Component {
     render() {
         return (
             <div className="row">
-                <div className="col">
+                <div className="col">                
                     <h3>Exercício</h3>
                     <hr />
                     {
